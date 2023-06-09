@@ -1,70 +1,16 @@
-# Getting Started with Create React App
+# Todo Application
+The Todo App is built using ReactJS that allows users to create, manage, and search for tasks or todos. It provides a user-friendly interface for organizing and keeping track of various tasks and It uses **Json Server** to store the tasks of the user.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+When the app loads, it presents a list of existing tasks, each represented as a separate item. Users can add new tasks by entering a task description in an input field and clicking an "Add" button. The newly added tasks appear in the list along with the existing ones.
 
-## Available Scripts
+The app also includes a search bar where users can enter keywords or phrases related to specific tasks they want to find. As users type in the search bar, the app dynamically filters the task list, displaying only the tasks that match the search criteria. This functionality allows users to quickly locate and focus on specific tasks within a large list.
 
-In the project directory, you can run:
+The Todo App leverages React's component-based architecture to create reusable components for managing tasks, displaying the task list, and handling user interactions. React's state management capabilities are utilized to store and update the list of tasks, as well as to filter the tasks based on the search query.
 
-### `npm start`
+By combining React's powerful features with an intuitive user interface, the Todo App with Searchbar showcases how ReactJS can be used to create a responsive and efficient task management application. It provides a practical example of how React can simplify the process of organizing and searching for tasks, enhancing productivity and organization.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Screenshots
+![Screenshot 2023-06-09 142514](https://github.com/Dharshan4038/Todo-App-ReactJS/assets/94830386/dd8802d0-2f30-4510-8781-a8aad82d9140)
+![Screenshot 2023-06-09 142701](https://github.com/Dharshan4038/Todo-App-ReactJS/assets/94830386/85f23ebd-b30e-4cdd-9562-f204a48e6d55)
+![Screenshot 2023-06-09 142715](https://github.com/Dharshan4038/Todo-App-ReactJS/assets/94830386/362ce7fb-0314-46cc-be0e-7f5502fde661)
+![Screenshot 2023-06-09 142801](https://github.com/Dharshan4038/Todo-App-ReactJS/assets/94830386/03fa11fb-442a-4fea-abe9-7c9012304591)

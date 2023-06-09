@@ -1,28 +1,46 @@
 import React from 'react';
+import apiRequest from '../apiRequest';
 
+export const Content = ({items,setItems,setFetchError}) => {
 
-export const Content = ({items,setItems}) => {
-
-    function handleChange(id) {
+    async function handleChange(id) {
         const listItems = items.map((item)=>{
             return item.id===id ? {...item,checked: !item.checked} : item;
         })
         setItems(listItems);
-        localStorage.setItem("todo_list",JSON.stringify(listItems));
+        const myItem = listItems.filter((item)=>{
+            return item.id===id;
+        })
+        const updateOption = {
+            method: 'PATCH',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({checked:myItem[0].checked})
+        }
+        const reqUrl = "http://localhost:3500/items/"+id;
+        const result = await apiRequest(reqUrl,updateOption);
+        if(result) setFetchError(result);
     }
 
-    function handleClick(id) {
+    async function handleClick(id) {
         const listItems = items.filter((item)=>{
             return item.id !== id ;
         })
         setItems(listItems);
-        localStorage.setItem("todo_list",JSON.stringify(listItems));
+
+        const deleteOption = {
+            method: "DELETE"
+        };
+
+        const reqUrl = "http://localhost:3500/items/"+id;
+        const result = await apiRequest(reqUrl,deleteOption);
+        if(result) setFetchError(result);
     }
     
     return (
         <div className='items'>
             <div>
-                
                 {items.length ? ( 
                     <ul style={{textAlign: "center"}}>
                         {items.map((item)=>{

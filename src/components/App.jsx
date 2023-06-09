@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState,useEffect } from 'react'
 import Header from './Header';
 import Footer from './Footer';
 import Content from './Content';
@@ -7,8 +7,12 @@ import SearchItem from './SearchItem';
 
 export const App = () => {
 
-    const [items,setItems] = useState(JSON.parse(localStorage.getItem("todo_list")));
+    const [items,setItems] = useState([]);
     const [search,setSearch] = useState("");
+
+    useEffect(()=> {
+        JSON.parse(localStorage.getItem("todo_list"))
+    }, [])
 
     function addItem(newItem) {
         const id = items.length ? items[items.length-1].id + 1 : 1;
@@ -16,7 +20,7 @@ export const App = () => {
         setItems(listItems)
         localStorage.setItem("todo_list",JSON.stringify(listItems));
     }
-
+    
     return (
         <div>
             <Header />
